@@ -5,7 +5,8 @@ use std::fmt;
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum TokenType {
-  Number,
+  Float,
+  Int,
   Str,
   Char,
   Bool,
@@ -23,7 +24,8 @@ impl fmt::Display for TokenType {
     use self::TokenType::*;
 
     match *self {
-      Number     => write!(f, "Number"),
+      Float      => write!(f, "Float"),
+      Int        => write!(f, "Int"),
       Str        => write!(f, "Str"),
       Char       => write!(f, "Char"),
       Bool       => write!(f, "Bool"),
